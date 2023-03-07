@@ -56,7 +56,9 @@
 
 - (void)testTunnelClientIsReadyToLaunch:(SBTUITestTunnelClient *)sender
 {
-    [self launch];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self launch];
+    });
 }
 
 - (void)testTunnelClient:(SBTUITestTunnelClient *)sender didShutdownWithError:(NSError *)error
