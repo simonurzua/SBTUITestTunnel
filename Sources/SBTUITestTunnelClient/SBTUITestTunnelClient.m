@@ -116,7 +116,7 @@ static NSTimeInterval SBTUITunneledApplicationDefaultTimeout = 30.0;
 
 - (void)launchTunnelWithStartupBlock:(void (^)(void))startupBlock
 {
-    NSAssert([NSThread isMainThread], @"This method should be invoked from main thread");
+    // NSAssert([NSThread isMainThread], @"This method should be invoked from main thread");
     
     self.launchStart = CFAbsoluteTimeGetCurrent();
     
